@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Hirebrew — design tokens. Originally ported from the SEEPCO
+   prototype, migrated wholesale to the Propflow palette (green
+   primary, purple AI, slate neutrals) so the recruit lifecycle
+   and the Talent OS share one design system.
+   ============================================================ */
+:root {
+  --bg: #F8FAFC;
+  --surface: #fff;
+  --border: #E2E8F0;
+  --border2: #F1F5F9;
+  --ink: #020617;
+  --ink2: #475569;
+  --ink3: #64748B;
+  --brand: #16B364;
+  --brandbg: #ECF9F3;
+  --ai: #AF52DE;
+  --aibg: #F7EEFC;
+  --aibd: #EFDDF8;
+  --green: #16B364;
+  --greenbg: #ECF9F3;
+  --amber: #EBA308;
+  --amberbg: #FEF7E6;
+  --red: #E81E17;
+  --redbg: #FDE8E8;
+  /* numeric/id glyphs ride Geist Mono — the Propflow-consistent mono */
+  --mono: var(--font-geist-mono), 'Geist Mono', monospace;
+
+  /* ============================================================
+     Propflow design system — Talent OS surfaces (route group (os)).
+     Extracted from the Propflow HR UI Kit Figma variables.
+     ============================================================ */
+  --pf-font: var(--font-geist), 'Geist', 'Inter', sans-serif;
+  --pf-primary-500: #16B364;
+  --pf-primary-600: #129152;
+  --pf-primary-100: #DAF3E6;
+  --pf-primary-50: #ECF9F3;
+  --pf-n0: #FFFFFF;
+  --pf-n25: #F8FAFC;
+  --pf-n50: #F1F5F9;
+  --pf-n100: #E2E8F0;
+  --pf-n300: #94A3B8;
+  --pf-n400: #64748B;
+  --pf-n500: #475569;
+  --pf-n600: #334155;
+  --pf-n900: #020617;
+  --pf-blue-500: #007AFF;
+  --pf-blue-100: #CCE5FF;
+  --pf-blue-50: #E5F2FF;
+  --pf-purple-500: #AF52DE;
+  --pf-purple-100: #EFDDF8;
+  --pf-purple-50: #F7EEFC;
+  --pf-yellow-500: #EBA308;
+  --pf-yellow-100: #FDEECE;
+  --pf-yellow-50: #FEF7E6;
+  --pf-red-500: #E81E17;
+  --pf-red-100: #FAD2D1;
+  --pf-red-50: #FDE8E8;
+  --pf-grey-900: #101010;
+  --pf-grey-500: #262626;
+  --pf-grey-200: #9B9B9B;
+}
+
+@theme {
+  --color-bg: #F8FAFC;
+  --color-surface: #ffffff;
+  --color-border: #E2E8F0;
+  --color-border2: #F1F5F9;
+  --color-ink: #020617;
+  --color-ink2: #475569;
+  --color-ink3: #64748B;
+  --color-brand: #16B364;
+  --color-brandbg: #ECF9F3;
+  --color-ai: #AF52DE;
+  --color-aibg: #F7EEFC;
+  --color-aibd: #EFDDF8;
+  --color-green: #16B364;
+  --color-greenbg: #ECF9F3;
+  --color-amber: #EBA308;
+  --color-amberbg: #FEF7E6;
+  --color-red: #E81E17;
+  --color-redbg: #FDE8E8;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+
+body {
+  font-family: var(--font-geist), 'Geist', sans-serif;
+  color: #020617;
+  background: #F8FAFC;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* No visible scrollbars anywhere — scrolling still works everywhere. */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { width: 0; height: 0; display: none; }
+
+/* Keyframes (ported 1:1) */
+@keyframes scIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+button { font-family: inherit; }
+
+/* Scrollable but no visible scrollbar (nav rails/panels). */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
